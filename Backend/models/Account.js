@@ -4,10 +4,19 @@ const Schema = mongoose.Schema
 
 
 const accountSchema = new Schema({
-    name:{type:String, required:true},
+    firstName:{type:String, required:true},
+    lastName:{type:String, required:true},
     email:{type:String, required:true},
+    username:{type:String, required:true},
     password:{type:String, required:true},
+    id:{type:Number, required:true},
     entryDate: {type:Date, default:Date.now}
+})
+
+const postSchema = new Schema({
+    text:{type:String,required:true},
+    date:{type:String,required:true},
+    authorId:{type:String,required:true},
 })
 
 const contactSchema = new Schema({
@@ -21,6 +30,7 @@ const contactSchema = new Schema({
 
 const Account = mongoose.model('Accounts',accountSchema,'users');
 const Contact = mongoose.model('Contact',contactSchema, 'contact-form')
+const Post = mongoose.model('Post',postSchema,'posts')
 
-const mySchemas = {'Accounts':Account, 'Contact':Contact}
+const mySchemas = {'Account':Account, 'Contact':Contact, 'Post':Post}
 module.exports = mySchemas

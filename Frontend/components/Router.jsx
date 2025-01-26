@@ -1,11 +1,8 @@
 //import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-import Header from './Header'
-import Footer from './Footer'
 import SignUp from '../pages/SignUp'
 import Home from '../pages/Home'
-import Product from '../pages/Product'
-import Contact from '../pages/Contact'
+import SignIn from '../pages/SignIn'
 
 export default function Router(){
     const Layout = () =>{
@@ -44,16 +41,8 @@ export default function Router(){
                 element:<SignUp/>
                 },
                 {
-                path: "/product/:id",
-                element:<Product/>
-                },
-                {
-                path: "/product",
-                element:<Product/>
-                },
-                {
-                    path: "/contact",
-                    element:<Contact/>
+                path: "/signin",
+                element: <SignIn/>
                 },
             ]
         }

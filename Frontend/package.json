@@ -11,11 +11,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-calendars": "^1.1308.1",
     "react-router-dom": "^6.22.3",
+    "tailwindcss": "^4.0.0",
     "vite-plugin-require": "^1.1.14"
   },
   "devDependencies": {
